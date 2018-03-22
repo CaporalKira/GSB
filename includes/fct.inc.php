@@ -96,7 +96,30 @@ function getMois($date)
     }
     return $annee . $mois;
 }
+/**
+     * Retourne le mois suivant au format aaaamm selon le jour dans le mois
+     *
+     * @param String $mois au format  aaaamm
+     *
+     * @return String Mois au format aaaamm
+     */
+    function getMoisSuivant($mois)
+    {
+        $numAnnee = substr($mois, 0, 4);
+        $numMois = substr($mois, 4, 2);
+        if ((int)$numMois < 12) {
+            $moisSuivant = (int)$numMois + 1;
+            $annee = $numAnnee;
+        }else{
+            $moisSuivant = 1;
+            $annee = (int)$numAnnee + 1;
+        }
+        if (strlen($moisSuivant) == 1) {
+            $moisSuivant = '0' . $moisSuivant;
+        }
 
+        return $annee . $moisSuivant;
+    }
 /* gestion des erreurs */
 
 /**
@@ -234,6 +257,20 @@ function ajouterErreur($msg)
     }
     $_REQUEST['erreurs'][] = $msg;
 }
+/**
+ * Ajoute le libelle d'une opération réussie
+ * 
+ * @param type $msg Libellé du succes.
+ * 
+ * 
+ */
+function ajouterSucces($msg)
+{
+    if (!isset($_REQUEST['succes'])) {
+        $_REQUEST['succes'] = array();
+    }
+    $_REQUEST['succes'][] = $msg;
+}
 
 /**
  * Retoune le nombre de lignes du tableau des erreurs
@@ -248,3 +285,16 @@ function nbErreurs()
         return count($_REQUEST['erreurs']);
     }
 }
+/**
+     * Retoune le nombre de lignes du tableau des succes
+     *
+     * @return Integer le nombre d'succes
+     */
+ function nbSucces()
+    {
+        if (!isset($_REQUEST['succes'])) {
+            return 0;
+        } else {
+            return count($_REQUEST['succes']);
+        }
+    }

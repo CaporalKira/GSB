@@ -1,9 +1,18 @@
 <?php
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * Vue liste frais utilisateur
+ *
+ * PHP Version 7
+ *
+ * @category  PPE
+ * @package   GSB
+ * @author    Réseau CERTA <contact@reseaucerta.org>
+ * @author    Abdelbasset DAAS <abdelbasset.daas@hotmail.fr>
+ * @copyright 2017 Réseau CERTA
+ * @license   Réseau CERTA
+ * @version   GIT: <0>
+ * @link      http://www.reseaucerta.org Contexte « Laboratoire GSB »
  */
 ?>
 <div class="row">
@@ -26,6 +35,7 @@
                                                 <option selected value="<?php echo $idVisiteur ?>">
                                                     <?php echo $nom . ' ' . $prenom ?> </option>
                                                 <?php
+                                                
                                             } else {
                                                 ?>
                                                 <option value="<?php echo $idVisiteur ?>">
@@ -55,6 +65,7 @@
                                                 <option selected value="<?php echo $mois ?>">
                                                     <?php echo $numMois . '/' . $numAnnee ?> </option>
                                                 <?php
+                                                
                                             } else {
                                                 ?>
                                                 <option value="<?php echo $mois ?>">

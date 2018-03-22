@@ -55,6 +55,9 @@ case 'gererFrais':
 case 'validerFrais':
     include 'controleurs/c_validerFrais.php';
     break;
+case 'suiviPaiment':
+    include 'controleurs/c_suiviPaiment.php';
+    break;
 case 'etatFrais':
     include 'controleurs/c_etatFrais.php';
     break;

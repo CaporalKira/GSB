@@ -23,8 +23,13 @@
         <meta name="description" content="">
         <meta name="author" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="./styles/bootstrap/bootstrap.css" rel="stylesheet">
+        <link rel="stylesheet" href="./styles/fontawesome/css/font-awesome.min.css">
+        <link href="./../styles/bootstrap/bootstrap.css" rel="stylesheet">
+        <link rel="stylesheet" href="styles/bootstrap/bootstrap.min.css">
         <link href="./styles/style.css" rel="stylesheet">
+        
+        <script src="./scripts/jquery/3.2.1/jquery.min.js"></script>
+        <script src="./scripts/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
     <body>
         <div class="container">
@@ -97,8 +102,8 @@
                                     Valider les fiches de frais
                                 </a>
                             </li>
-                            <li <?php if ($uc == 'etatFrais') { ?>class="active"<?php } ?>>
-                                <a href="index.php?uc=etatFrais&action=selectionnerMois">
+                            <li <?php if ($uc == 'suiviPaiment') { ?>class="active"<?php } ?>>
+                                <a href="index.php?uc=suiviPaiment&action=listeFiche">
                                     <span class="glyphicon glyphicon-euro"></span>
                                     Suivre le paiement fiches de frais
                                 </a>
