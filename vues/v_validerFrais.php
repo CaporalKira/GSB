@@ -85,7 +85,7 @@
                             <div class="col-md-8">
                                 <input type="text" id="date" 
                                name="date"
-                               size="10" maxlength="5" 
+                               size="10" maxlength="10" 
                                value="<?php echo $date ?>" 
                                class="form-control">
                                 <?php
@@ -96,7 +96,7 @@
                         <td><div class="col-md-12">
                                  <input type="text" id="libelle" 
                                name="libelle"
-                               size="10" maxlength="5" 
+                               size="10" maxlength="100" 
                                value="<?php echo $libelle ?>" 
                                class="form-control">
                                  <?php
